@@ -39,4 +39,9 @@ public:
 	afx_msg void OnBnClickedLcw();
 	afx_msg void OnBnClickedLdw();
 	afx_msg void OnBnClickedDecode();
+	string codedtxt;
+	afx_msg void OnBnClickedSave1();
+	afx_msg void OnBnClickedLoad1();
+	afx_msg void OnBnClickedSave2();
+	afx_msg void OnBnClickedLoad2();
 };

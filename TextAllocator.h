@@ -24,7 +24,7 @@ private:
 
 protected:
 	char* StringToChar(string& data);
-
+	CString StrToCStr(string& data);
 
 public:
 	TextAlloc();
@@ -36,6 +36,7 @@ public:
 
 	string GetKey();
 	string GetOstr();
+	CString GetCOstr();
 	int getAddBytes();
 
 

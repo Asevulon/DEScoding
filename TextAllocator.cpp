@@ -23,6 +23,10 @@ string TextAlloc::GetOstr()
 {
 	return ostr;
 }
+CString TextAlloc::GetCOstr()
+{
+	return StrToCStr(ostr);
+}
 int TextAlloc::getAddBytes()
 {
 	return addBytes;
@@ -159,5 +163,15 @@ char* TextAlloc:: StringToChar(string& data)
 {
 	char res[8];
 	for (int i = 0; i < data.size(); i++)res[i] = data[i];
+	return res;
+}
+CString TextAlloc::StrToCStr(string& data)
+{
+	CString res;
+	for (int i = 0; i < data.size(); i++)
+	{
+		wchar_t temp = int(data[i]);
+		res += temp;
+	}
 	return res;
 }
